@@ -1,0 +1,25 @@
+{
+    "baseUrl":"https://www.google.com.au",
+    "env":{
+
+    },
+    "screenshotOnRunFailure":true,
+    "screenshotsFolder":"cypress/screenshots",
+    "trashAssetsBeforeRuns":true,
+    "retries":
+    	{ "runMode": 1, "openMode": 1 },
+          "video": false,
+  "integrationFolder": "cypress/integration",
+  "downloadsFolder":"cypress/downloads",
+  "defaultCommandTimeout": 60000,
+  "pageLoadTimeout": 60000,
+  "responseTimeout": 60000,
+  "chromeWebSecurity": false,
+  "reporter": "cypress-mochawesome-reporter",
+  "reporterOptions": {
+    "reportDir": "cypress/report",
+    "charts": true,
+    "reportPageTitle": "SecurePayE2E",
+    "embeddedScreenshots":true
+  }
+}
