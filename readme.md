@@ -15,3 +15,5 @@
 -- npm run securePay:test:open / npx open cypress
 
 ### Reports are found under reports folder
+
+### Used Faker for random test data
