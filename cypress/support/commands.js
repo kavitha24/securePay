@@ -12,26 +12,25 @@
 // -- This is to verify the url --
 //import { faker } from 'https://cdn.skypack.dev/@faker-js/faker'
 
-Cypress.Commands.add('verifyURL', (url) => {
-    cy.location().should((loc) => {
-        expect(loc.href).to.eq(url)
-    })
-})
-// To generate random data    
-    Cypress.Commands.add('generateFixture', () => {
-        const { faker } = require('@faker-js/faker')
-        cy.writeFile('cypress/fixtures/salesEnquiryData.json', {
-    'hits':Cypress._.times(1, () => {
+Cypress.Commands.add("verifyURL", (url) => {
+  cy.location().should((loc) => {
+    expect(loc.href).to.eq(url);
+  });
+});
+// To generate random data
+Cypress.Commands.add("generateFixture", () => {
+  const { faker } = require("@faker-js/faker");
+  cy.writeFile("cypress/fixtures/salesEnquiryData.json", {
+    hits: Cypress._.times(1, () => {
       return {
-        'company':`${faker.lorem.words(3)}`,
-        'website':`${faker.internet.url()}`,
-            'firstName': `${faker.name.firstName()}`,
-          'lastName':`${faker.name.lastName() }`,
-        'enquiry':`Test${faker.lorem.words(3)}`,
-          'phone': `${faker.phone.phoneNumber()}`,
-        'email' : `${faker.internet.email()}`
-      }
-    })
-  })
-})
-
+        company: `${faker.lorem.words(3)}`,
+        website: `${faker.internet.url()}`,
+        firstName: `${faker.name.firstName()}`,
+        lastName: `${faker.name.lastName()}`,
+        enquiry: `Test${faker.lorem.words(3)}`,
+        phone: `${faker.phone.phoneNumber()}`,
+        email: `${faker.internet.email()}`,
+      };
+    }),
+  });
+});
